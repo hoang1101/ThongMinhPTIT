@@ -285,7 +285,7 @@ exports.getReportId = async (req, res) => {
           ],
         },
       ],
-      attributes: ["userId", "content", "createdAt"],
+      attributes: ["userId", "content", "status", "createdAt"],
     });
     return res.status(200).json({
       success: true,
@@ -301,13 +301,13 @@ exports.getReportId = async (req, res) => {
 };
 
 exports.editReport = async (req, res) => {
-  const { iduser } = req.params;
-  const { content,status } = req.body;
+  const { id } = req.params;
+  const { content, status } = req.body;
   try {
     const report = await db.ReportUser.create({
       content,
       status,
-      userId: iduser,
+      userId: id,
     });
     return res.status(200).json({
       success: true,

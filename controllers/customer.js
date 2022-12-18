@@ -232,20 +232,18 @@ exports.createReport = async (req, res) => {
           content: "Xin lỗi! Hiện tại chat bot đang quá tải",
           success: false,
         });
-      const {add} = content[1];
-
-
+      const { add } = content[1];
 
       res.status(200).json({
         data: content[1],
         success: true,
       });
-      
-      const reportAD = await db.ReportUser.create({
-        content : add,
-        userId: _id,
-        status: 0,
-      });
+
+      // const reportAD = await db.ReportUser.create({
+      //   content: add,
+      //   userId: _id,
+      //   status: 0,
+      // });
     });
 
     // return res.status(200).json({
