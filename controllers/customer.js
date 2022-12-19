@@ -216,11 +216,11 @@ exports.createReport = async (req, res) => {
   const _id = await user.idUser(email);
   console.log(_id);
   try {
-    const report = await db.ReportUser.create({
-      content,
-      userId: _id,
-      status: 0,
-    });
+    // const report = await db.ReportUser.create({
+    //   content,
+    //   userId: _id,
+    //   // status: 0,
+    // });
 
     let { PythonShell } = require("python-shell");
     var options = {
@@ -232,7 +232,7 @@ exports.createReport = async (req, res) => {
           content: "Xin lỗi! Hiện tại chat bot đang quá tải",
           success: false,
         });
-      const { add } = content[1];
+      // const { add } = content[1];
 
       res.status(200).json({
         data: content[1],
