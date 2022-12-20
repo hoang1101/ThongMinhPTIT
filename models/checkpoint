@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\lhhoa\\Downloads\\hihi\\chatbot-demo-master\\models\\model.tflearn"
-all_model_checkpoint_paths: "C:\\Users\\lhhoa\\Downloads\\hihi\\chatbot-demo-master\\models\\model.tflearn"
+model_checkpoint_path: "D:\\thongminhtestapi\\ThongMinhPTIT-main\\models\\model.tflearn"
+all_model_checkpoint_paths: "D:\\thongminhtestapi\\ThongMinhPTIT-main\\models\\model.tflearn"

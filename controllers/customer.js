@@ -224,8 +224,9 @@ exports.createReport = async (req, res) => {
 
     let { PythonShell } = require("python-shell");
     var options = {
-      args: [req.query.content],
+      args: [req.body.content],
     };
+    console.log(req.body.content);
     PythonShell.run("main.py", options, async (err, content) => {
       if (err)
         res.status(500).json({
@@ -235,7 +236,7 @@ exports.createReport = async (req, res) => {
       // const { add } = content[1];
 
       res.status(200).json({
-        data: content[1],
+        content,
         success: true,
       });
 

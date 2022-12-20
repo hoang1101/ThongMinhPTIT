@@ -82,7 +82,7 @@ model.load('./models/model.tflearn')
 
 
 # data structure to hold user context
-context = {}
+
 
 ERROR_THRESHOLD = 0.25
 def classify(sentence):
@@ -94,18 +94,13 @@ def classify(sentence):
         return_list.append((classes[r[0]], r[1]))
     return return_list
 
-def response(sentence, userID='1', show_details=False):
+def response(sentence):
     results = classify(sentence)
     if results:
         while results:
             for i in intents['intents']:
                 if i['tag'] == results[0][0]:
-                    if 'context_set' in i:
-                        if show_details: print ('context:', i['context_set'])
-                        context[userID] = i['context_set']
-                    if not 'context_filter' in i or                         (userID in context and 'context_filter' in i and i['context_filter'] == context[userID]):
-                        if show_details: print ('tag:', i['tag'])
-                        return print(random.choice(i['responses']))
+                    return print(random.choice(i['responses']))
 
             results.pop(0)
 

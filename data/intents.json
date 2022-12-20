@@ -1,36 +1,293 @@
-{"intents": [
-        {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
-         "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
-         "context_set": ""
-        },
-        {"tag": "hours",
-         "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
-         "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
-        },
-        {"tag": "menu",
-         "patterns": ["I want to order", "What kinds of food are there?", "What is your delicous food?" ],
-         "responses": ["Are you ready to order? Our restaurant have pizza, vegetable pasta, beefsteack. These is special of our restaurant", "Can I help you? This is menu. Please ask me if you have any question."]
-        },
-        {"tag": "payments",
-         "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
-         "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
-        },
-        {"tag": "opentoday",
-         "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
-         "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
-       },
-       {"tag": "completeorder",
-        "patterns": ["that is all", "Yes, we'll have the chicken with vegetables, and the vegetable pasta please", "Just some water please"],
-        "responses": ["Thankyou for ordering, Please wait me some minutes."]
-      },
-      {"tag": "goodbye",
-       "patterns": ["Bye", "See you later", "Goodbye"],
-       "responses": ["See you later, thanks for visiting", "Have a nice day", "Bye! Come back again soon."]
-      },
-      {"tag": "thanks",
-       "patterns": ["Thanks", "Thank you", "That's helpful"],
-       "responses": ["Happy to help!", "Any time!", "My pleasure"]
-      }
-   ]
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hello, thanks for visiting",
+        "Good to see you again",
+        "Hi there, how can I help?"
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "TG-NH",
+      "patterns": [
+        "When I received the goods?",
+        "when will my goods be delivered",
+        "when will the goods be delivered",
+        "how long will it take for my order to be delivered"
+      ],
+      "responses": [
+        "After you have successfully placed your order, your goods will be delivered in 3-5 days",
+        "About 3 to 5 days after applying"
+      ]
+    },
+
+    {
+      "tag": "GH-day-le",
+      "patterns": ["Does delivery on weekends and holidays?"],
+      "responses": ["We deliver on holidays and weekends"]
+    },
+
+    {
+      "tag": "TG-hoat-dong",
+      "patterns": [
+        "How long does the website work?",
+        "What time does the website work",
+        "What time does the website work"
+      ],
+      "responses": [
+        "We operate from 7:00 o'clock to 17:00 o'clock",
+        "The website operates from 7 am to 5 pm"
+      ]
+    },
+    {
+      "tag": "TG-in-tuan",
+      "patterns": [
+        "Is the website working today?",
+        "Is this page active today",
+        "what days does the website work",
+        "What day of the week does the website work"
+      ],
+      "responses": [
+        "We work every day of the week from 7:00 to 17:00",
+        "We always work every day from 7:00 to 17:00"
+      ]
+    },
+    {
+      "tag": "DH-Giao-gap",
+      "patterns": [
+        "Can you deliver my order urgently?",
+        "Can the order be delivered faster than expected?"
+      ],
+      "responses": [
+        "We will always try our best to get your order to the place as soon as possible"
+      ]
+    },
+
+    {
+      "tag": "XN-DH",
+      "patterns": ["How will I know exactly when I receive the item?"],
+      "responses": [
+        "Before delivery, the shipping unit will contact you to schedule delivery date and time"
+      ]
+    },
+
+    {
+      "tag": "huy-don-hang",
+      "patterns": ["Can I cancel my order", "I want to cancel my order"],
+      "responses": ["You can cancel an order when it has not been delivered"]
+    },
+
+    {
+      "tag": "GH-NN",
+      "patterns": [
+        "Do you deliver overseas?",
+        "I want to deliver over the country",
+        "Can I ship to another country?"
+      ],
+      "responses": [
+        "Currently we do not support international delivery, please understand"
+      ]
+    },
+    {
+      "tag": "SHIPPER",
+      "patterns": [
+        "My account is locked, what do I do?",
+        "I want to unlock my account",
+        "I can't log in"
+      ],
+      "responses": [
+        "Please follow the instructions at the lock screen. Need to contact the consultant, please contact the hotline 19001009"
+      ]
+    },
+    {
+      "tag": "SHIPPER_",
+      "patterns": [
+        "How do I know which bonus programs I'm applying for, whether I've won or not, when the bonus is added?"
+      ],
+      "responses": [
+        "To see the bonus programs that are being applied, Partners please see details at Tracking achievements"
+      ]
+    },
+    {
+      "tag": "SHIPPER__",
+      "patterns": ["What do I need to prepare to register?"],
+      "responses": [
+        "Partners need to prepare the following documents: - Original identity card/citizen identity card - Driving license - Vehicle registration certificate - Criminal record/Certificate of no criminal record/Household book - Paper vaccination confirmation (at least 01 dose)"
+      ]
+    },
+    {
+      "tag": "SHIPPER___",
+      "patterns": ["What benefits do I get as a driver?"],
+      "responses": [
+        "When you become a Driver, you will receive a lot of attractive offers from different brands and industries. For details, please go to Track Achievements > My Offers to use. !"
+      ]
+    },
+    {
+      "tag": "SHIPPER____",
+      "patterns": [
+        "I received an incorrect procedure completion warning, what should I do?"
+      ],
+      "responses": [
+        "Partners who receive an order warning that the order has been completed in the wrong process should note the following cases: TH1: The partner ensures that the order process is correct, the following cases: click Received when not picked up, not yet delivered to customers who clicked Success/Failure, did not pick up the goods for delivery but still clicked Success/Fail, Update order status at wrong time or location,.. Violating partner will apply the policy account under account A2 of the Quality Assurance Regulations (Reference link below) TH2: If the customer requests to change the address or the recorded location is wrong, the Partner can ignore that warning ."
+      ]
+    },
+    {
+      "tag": "SHIPPER_____",
+      "patterns": [
+        "Will the reduced number of stars on the driver app affect my account?"
+      ],
+      "responses": [
+        "In the event that a decrease in the star rating rate will affect the number of orders, the Partner's bonus program. To improve, the Partner should encourage customers to rate 5 stars for the next orders. Always maintain maintain the average number of stars > 4.7 to ensure the benefits of the order for yourself."
+      ]
+    },
+    {
+      "tag": "SHIPPER_Order",
+      "patterns": ["What should I do with a failed order?"],
+      "responses": [
+        "After contacting the recipient for 15 minutes, at least 3 calls, the Partner please contact the sender again to inform. If the sender still cannot contact the recipient, the Partner will notify about the refund. The partner updates the failure status and returns the goods within 4 hours.",
+        "If the person cannot contact both the recipient and the sender, the goods will be returned to the nearest branch for settlement."
+      ]
+    },
+    {
+      "tag": "shipper_order1",
+      "patterns": ["I was bombed?"],
+      "responses": [
+        "When the goods are bombed, you need to contact the hotline 19001009 to be handled. Partners should absolutely not advance money according to notes or arising outside of the customer's side to minimize risks during the application process. Support policy in case of single bomb/out of stock is: 80% up to 3,000,000 VND/unit."
+      ]
+    },
+    {
+      "tag": "shipper_order2",
+      "patterns": [
+        "In case a customer wants to change the delivery address on the app, what should I do?"
+      ],
+      "responses": [
+        "Only accept customers with actual address shown on the app when receiving applications, partners contact and negotiate freight (5000 VND/km)"
+      ]
+    },
+    {
+      "tag": "shipper_order3",
+      "patterns": [
+        "Customer does not order bulky goods but exceeds the standard size, what should I do?"
+      ],
+      "responses": [
+        "If the limit is negotiable with the applicant: Level 1: 60x50x60cm (maximum 40 kg): 10,000 VND Level 2: 70x60x70cm (maximum 60kg): 20,000 VND Level 3: 90x70x90cm (maximum 80kg): 40,000 VND If the negotiation fails or the Partner does not have a bulky delivery device available, the Partner can cancel the order himself and take a photo of the authentication according to the instructions on the application without pressing 'Picked up'."
+      ]
+    },
+    {
+      "tag": "shipper_order4",
+      "patterns": ["Customer won't let me check the goods?"],
+      "responses": [
+        "If you see any abnormal signs, you can contact the call center for support",
+        "Customers who do not agree to the inspection of goods can cancel the order and refuse the customer."
+      ]
+    },
+    {
+      "tag": "shipper_order5",
+      "patterns": ["Client requested to wait a period of time?"],
+      "responses": [
+        "Notify customers the maximum waiting time is 15 minutes",
+        "Note The Partner needs to explain to the customer about the company's stipulated time. If the customer requests to wait more than the specified time, the Partner has the right to refuse delivery. The Partner needs to notify the sender. and return the goods."
+      ]
+    },
+    {
+      "tag": "shipper_order6",
+      "patterns": [
+        "What to do with the advance?",
+        "Do you have to advance money to customers when making an application?",
+        "Have you been scammed, lost when receiving the application and the customer requested an advance?"
+      ],
+      "responses": [
+        "All Customers who are allowed to use the COD request feature on the Ahamove system have been verified and have their accounts identified. Therefore, Partners can rest assured when making advances to Customers. Cash advance according to the information displayed on the order, unfortunately, if there is an accident, Ahamove will support compensation at the rate of 80%, up to 3 million / order."
+      ]
+    },
+    {
+      "tag": "shipper_order7",
+      "patterns": ["Are GHN's goods bulky?"],
+      "responses": [
+        "Dimensions must not exceed 50x40x50cm and weight does not exceed 30kg. Besides, for goods with larger sizes than specified, Customers will order an additional service called HUGE DELIVERY to support additional fees. for Partners."
+      ]
+    },
+    {
+      "tag": "shipper_order8",
+      "patterns": [
+        "The order on the app is more misaligned than it really is, what do I need to do to locate it better?"
+      ],
+      "responses": [
+        "For orders that are far apart from the reality, the Partner please continue to execute the order and when the delivery is complete, the Partner clicks on the order report for the system to check and support."
+      ]
+    },
+    {
+      "tag": "shipper_order9",
+      "patterns": [
+        "My account is locked because I haven't applied the decal yet?"
+      ],
+      "responses": [
+        "In case the account is locked because the partner has not applied the decal, the Partner needs to go to the office to receive the decal, paste the decal and take an authentic photo, then the account will be reopened within 1 to 3 working days"
+      ]
+    },
+    {
+      "tag": "shipper_order10",
+      "patterns": [
+        "Customers requested loading and unloading but have not ordered attached services?"
+      ],
+      "responses": [
+        "Partners can negotiate with order creators to collect extra bulky goods."
+      ]
+    },
+    {
+      "tag": "shipper_order11",
+      "patterns": [
+        "If the authorities keep my goods and car, what should I do?"
+      ],
+      "responses": [
+        "Partner please contact the owner of the goods to handle. In case, the Partner does not bring the vehicle documents, the Partner will be fully responsible."
+      ]
+    },
+    {
+      "tag": "customer",
+      "patterns": ["Does GHN deliver for businesses?"],
+      "responses": [
+        "GHN provides delivery services to all businesses of all sizes in Vietnam with fast delivery quality and competitive prices. GHN perfectly meets your needs in both peak season or daily. , whether your business uses delivery only with a small number of orders per week or a large number of orders per day, we can optimize service according to your requirements. Learn more by contacting us. Contact hotline 19001009 for advice."
+      ]
+    },
+    {
+      "tag": "customer1",
+      "patterns": [
+        "What shipping features will help boost my delivery and my business?"
+      ],
+      "responses": [
+        "- Lower operating costs - More savings with multi-stop delivery -Minimize the hassle with API features"
+      ]
+    },
+    {
+      "tag": "customer2",
+      "patterns": ["What is a business account?"],
+      "responses": [
+        "Sign up as a Business Account to enjoy the following exclusive features:- Manage multiple employees in one account with specific roles and access rights- Integrate your business directly with the solution Our API solution- Connect the look and feel of your e-commerce site with our many available plugins- Spend directly from a shared business wallet and manage your finances- Track public account spending your company easily through monthly statements- Access downloadable reports and analytics directly from your overview page"
+      ]
+    }
+  ]
 }

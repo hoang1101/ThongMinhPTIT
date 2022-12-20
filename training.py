@@ -60,6 +60,19 @@ ngrams('a b c d e f g h', 4)
 
 
 # In[3]:
+s1 = u'ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝàáâãèéêìíòóôõùúýĂăĐđĨĩŨũƠơƯưẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ'
+s0 = u'AAAAEEEIIOOOOUUYaaaaeeeiioooouuyAaDdIiUuOoUuAaAaAaAaAaAaAaAaAaAaAaAaEeEeEeEeEeEeEeEeIiIiOoOoOoOoOoOoOoOoOoOoOoOoUuUuUuUuUuUuUuYyYyYyYy'
+
+
+def remove_accents(input_str):
+    s = ''
+    input_str.encode('utf-8')
+    for c in input_str:
+        if c in s1:
+            s += s0[s1.index(c)]
+        else:
+            s += c
+    return s
 
 
 words = []
@@ -70,7 +83,7 @@ ignore_words = ['?', 'và', 'à', 'ừ', 'ạ', 'vì', 'từng', 'một_cách']
 for intent in intents['intents']:
     for pattern in intent['patterns']:
 
-        w = nltk.word_tokenize(pattern)
+        w = nltk.word_tokenize(remove_accents(pattern))
         words.extend(w)
         documents.append((w, intent['tag']))
         if intent['tag'] not in classes:
