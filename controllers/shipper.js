@@ -296,34 +296,55 @@ exports.confirmOrder = async (req, res) => {
 
 
 // tao mot report 
-exports.createReport = async (req, res) => {
-    const {
-        content,
-        status
-    } = req.body;
+exports.createReport = async (req, res) =>{
+    const { content, status } = req.body;
     const email = res.req.Account.email;
     const _id = await user.idUser(email);
     console.log(_id);
     try {
-        const report = await db.ReportUser.create({
-            content,
-            userId: _id,
-            status,
-        })
-
-        return res.status(200).json({
-            success: true,
-            report
-        })
-
-    } catch (err) {
-        return res.status(500).json({
+      // const report = await db.ReportUser.create({
+      //   content,
+      //   userId: _id,
+      //   // status: 0,
+      // });
+  
+      let { PythonShell } = require("python-shell");
+      var options = {
+        args: [req.body.content],
+      };
+      console.log(req.body.content);
+      PythonShell.run("main.py", options, async (err, content) => {
+        if (err)
+          res.status(500).json({
+            content: "Xin lỗi! Hiện tại chat bot đang quá tải",
             success: false,
-            err: -1,
-            msg: 'Fail at auth controller: ' + err
-        })
+          });
+        // const { add } = content[1];
+  
+        res.status(200).json({
+          content,
+          success: true,
+        });
+  
+        // const reportAD = await db.ReportUser.create({
+        //   content: add,
+        //   userId: _id,
+        //   status: 0,
+        // });
+      });
+  
+      // return res.status(200).json({
+      //   success: true,
+      //   report,
+      // });
+    } catch (err) {
+      return res.status(500).json({
+        success: false,
+        err: -1,
+        msg: "Fail at auth controller: " + err,
+      });
     }
-}
+  };
 
 
 
