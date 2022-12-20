@@ -32,6 +32,9 @@ exports.getAllCustomer = async (req, res) => {
 exports.getAllShipper = async (req, res) => {
   try {
     const data = await db.Account.findAll({
+      where: {
+        role: "shipper",
+      },
       include: [
         {
           model: db.Shipper,

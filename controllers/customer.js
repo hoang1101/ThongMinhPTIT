@@ -236,7 +236,7 @@ exports.createReport = async (req, res) => {
       // const { add } = content[1];
 
       res.status(200).json({
-        content,
+        data:content,
         success: true,
       });
 

@@ -1,42 +1,11 @@
 {
   "intents": [
     {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hello, thanks for visiting",
-        "Good to see you again",
-        "Hi there, how can I help?"
-      ],
-      "context_set": ""
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
       "tag": "TG-NH",
       "patterns": [
         "When I received the goods?",
-        "when will my goods be delivered",
-        "when will the goods be delivered",
-        "how long will it take for my order to be delivered"
+        "When will my goods be delivered",
+        "How long will it take for my order to be delivered"
       ],
       "responses": [
         "After you have successfully placed your order, your goods will be delivered in 3-5 days",
@@ -46,15 +15,14 @@
 
     {
       "tag": "GH-day-le",
-      "patterns": ["Does delivery on weekends and holidays?"],
+      "patterns": ["does delivery on weekends and holidays?"],
       "responses": ["We deliver on holidays and weekends"]
     },
 
     {
-      "tag": "TG-hoat-dong",
+      "tag": "TG_word",
       "patterns": [
         "How long does the website work?",
-        "What time does the website work",
         "What time does the website work"
       ],
       "responses": [
@@ -76,7 +44,7 @@
       ]
     },
     {
-      "tag": "DH-Giao-gap",
+      "tag": "DH",
       "patterns": [
         "Can you deliver my order urgently?",
         "Can the order be delivered faster than expected?"
@@ -220,12 +188,12 @@
         "Have you been scammed, lost when receiving the application and the customer requested an advance?"
       ],
       "responses": [
-        "All Customers who are allowed to use the COD request feature on the Ahamove system have been verified and have their accounts identified. Therefore, Partners can rest assured when making advances to Customers. Cash advance according to the information displayed on the order, unfortunately, if there is an accident, Ahamove will support compensation at the rate of 80%, up to 3 million / order."
+        "All Customers who are allowed to use the COD request feature on the GHN system have been verified and have their accounts identified. Therefore, Partners can rest assured when making advances to Customers. Cash advance according to the information displayed on the order, unfortunately, if there is an accident, GHN will support compensation at the rate of 80%, up to 3 million / order."
       ]
     },
     {
       "tag": "shipper_order7",
-      "patterns": ["Are GHN's goods bulky?"],
+      "patterns": ["Are GHN goods bulky?"],
       "responses": [
         "Dimensions must not exceed 50x40x50cm and weight does not exceed 30kg. Besides, for goods with larger sizes than specified, Customers will order an additional service called HUGE DELIVERY to support additional fees. for Partners."
       ]
@@ -267,14 +235,14 @@
       ]
     },
     {
-      "tag": "customer",
+      "tag": "customer_bs",
       "patterns": ["Does GHN deliver for businesses?"],
       "responses": [
         "GHN provides delivery services to all businesses of all sizes in Vietnam with fast delivery quality and competitive prices. GHN perfectly meets your needs in both peak season or daily. , whether your business uses delivery only with a small number of orders per week or a large number of orders per day, we can optimize service according to your requirements. Learn more by contacting us. Contact hotline 19001009 for advice."
       ]
     },
     {
-      "tag": "customer1",
+      "tag": "customer1_bs",
       "patterns": [
         "What shipping features will help boost my delivery and my business?"
       ],
@@ -283,11 +251,420 @@
       ]
     },
     {
-      "tag": "customer2",
+      "tag": "customer2_bs",
       "patterns": ["What is a business account?"],
       "responses": [
         "Sign up as a Business Account to enjoy the following exclusive features:- Manage multiple employees in one account with specific roles and access rights- Integrate your business directly with the solution Our API solution- Connect the look and feel of your e-commerce site with our many available plugins- Spend directly from a shared business wallet and manage your finances- Track public account spending your company easily through monthly statements- Access downloadable reports and analytics directly from your overview page"
       ]
+    },
+    {
+      "tag": "customer3_bs",
+      "patterns": ["Why should I join becoming a corporate customer?"],
+      "responses": [
+        "We'll save you the most with exclusive perks and offers anytime you sign up or top up!"
+      ]
+    },
+    {
+      "tag": "customer4_bs",
+      "patterns": ["How to register to become a corporate partner of GHN?"],
+      "responses": ["Become a GHN partner now by creating a Business Account!"]
+    },
+    {
+      "tag": "customer5_bs",
+      "patterns": [
+        "How easy is it for my team to update my order information?"
+      ],
+      "responses": [
+        "Multiple users can be tagged in the same company account helping to keep everyone informed"
+      ]
+    },
+    {
+      "tag": "customer6_bs",
+      "patterns": ["Can GHN transport bulky goods in large quantities?"],
+      "responses": [
+        "Have! We process your bulky delivery right away! An API technical solution that links our delivery software to your system to automate order scheduling. Tell us more about your delivery needs, our friendly and professional customer service team will contact you shortly."
+      ]
+    },
+    {
+      "tag": "customer7_bs",
+      "patterns": ["Does GHN support my industry?"],
+      "responses": [
+        "Of course! Our customers come from many different industries. From F&B, e-commerce to retail and furniture. No matter what industry you are in, we can deliver for you!"
+      ]
+    },
+    {
+      "tag": "customer8_bs",
+      "patterns": ["Can I receive an electronic invoice for my order?"],
+      "responses": [
+        "If you have provided us with an email address, you will automatically receive an electronic invoice each time you complete an order. In addition, a monthly report will be released, fully organizing the necessary data for your finance and audit team."
+      ]
+    },
+    {
+      "tag": "customer9_bs",
+      "patterns": ["How to order multi-stop delivery?"],
+      "responses": [
+        "Just tap Add Return Point to add stops. You can add up to 19 return points.You can also drag and reorder the stops according to your needs!"
+      ]
+    },
+    {
+      "tag": "customer10_bs",
+      "patterns": ["How to add teammates to my business account?"],
+      "responses": [
+        "Users with Admin role in the corporate account can invite a new or existing user to join your business account via Email. Kindly tap the button Invite new member under setting page in Team category on web, enter the email address of the new teammate.New teammate will be added to your corporate account after he/she finishes the steps in the invitation email."
+      ]
+    },
+    {
+      "tag": "customer11_bs",
+      "patterns": ["What is total estimated delivery time?"],
+      "responses": [
+        "Once an order has been successfully matched, you will be able to see an estimated arrival time on the map. Once the driver has picked up your delivery, the time listed will be the estimated arrival time to the drop off location.Please note that the time listed is only for reference and may be changed due to unforeseeable reasons such as traffic and weather issues."
+      ]
+    },
+    {
+      "tag": "customer12_bs",
+      "patterns": ["Are there any special promotions for a corporate member?"],
+      "responses": [
+        "We’ll help you save more with unbeatable corporate perks and rewards, whenever you sign up or top up! Read more about our corporate benefits.Corporate clients also receive free account management services, as well as ongoing support from our sales and customer service teams."
+      ]
+    },
+    {
+      "tag": "customer12_bs",
+      "patterns": ["Do you provide monthly statement?"],
+      "responses": [
+        "To automitically receive Statement for each month, kindly activate the Receive monthly statements by email function under your setting page in Notification category on web. Add the recipent email below to receive the statement.You may also download Statement under your setting page in Statement category on web."
+      ]
+    },
+    {
+      "tag": "MakinganOrder",
+      "patterns": [
+        "Will I receive an update when my delivery has been received?"
+      ],
+      "responses": [
+        "Yes! Our e-signature feature provides a proof of delivery, allowing you to know immediately when your recipient has received your items and signed."
+      ]
+    },
+    {
+      "tag": "MakinganOrder1",
+      "patterns": ["Is there a way to keep track of my goods during transit?"],
+      "responses": [
+        "With our live tracking feature, GHN allows you to track every order as it makes its way to the destination. See where your driver is in real time and get notified instantly when the delivery has been completed. You can even send the tracking information to your customer, so they know the estimated time of arrival. "
+      ]
+    },
+    {
+      "tag": "MakinganOrder2",
+      "patterns": [
+        "Will I be notified when there is an order status change via API?"
+      ],
+      "responses": [
+        "Yes, our API is able to proactively provide status updates with Webhooks."
+      ]
+    },
+    {
+      "tag": "placeanorder",
+      "patterns": ["How to place an order?"],
+      "responses": [
+        "1 - Input the address for pick up and drop off. 2 - Select the vehicle type. 3 - Select any additional service. 4 - Add in any reference and confirm the booking"
+      ]
+    },
+    {
+      "tag": "placeanorder1",
+      "patterns": ["Is the goods ensure safety when shipping?"],
+      "responses": [
+        "With the GPS positioning feature integrated right in the application, the store owner easily tracks the delivery process. In addition, GHN also provides a package of commodity insurance services with a compensation value of up to 2 billion, ensuring absolute peace of mind for large value packages."
+      ]
+    },
+    {
+      "tag": "placeanorder2",
+      "patterns": ["How to contact the driver?"],
+      "responses": [
+        "If you need to get back in touch with the driver, you can call or text through the app in the order information section."
+      ]
+    },
+    {
+      "tag": "placeanorder3",
+      "patterns": ["How to check driver chat messages in app?"],
+      "responses": [
+        "Once your order is connected to the driver, you will be able to view the driver's details. Upon receiving your order, the driver will contact you by phone to confirm delivery.If you want to get in touch with the driver again, below the driver details, you can click the Chat or Call icon to use the chat feature in the app to message message or call the driver directly. "
+      ]
+    },
+    {
+      "tag": "placeanorder4",
+      "patterns": ["What are the delivery statuses?"],
+      "responses": [
+        "Each order will show the delivery status in real time. Some of the statuses that may appear in your order are:On the mobile app:Searching -> We are currently looking for a driver for your orderIn Progress -> Your order has been matched with a driver and the driver is heading to the Pick Up PointArrived at pick up point -> Driver arrived at pick up pointArrive at the drop off point -> Driver has arrived at the drop off pointInvoice confirmation -> Driver has finished unloading and is confirming final invoiceBill payment -> Driver sent the final billDone -> Delivery completed and payment settledCanceled -> Your order is cancelledOn the web applicationConnecting -> We are currently connecting a driver for your orderIn progress -> Your order has been matched with a driver and the driver is heading to the pick up pointArrived -> Driver has received the item and is heading to the drop off pointInvoice confirmation -> Driver has finished unloading and is confirming "
+      ]
+    },
+    {
+      "tag": "placeanorder5",
+      "patterns": ["I want the driver to help me unload the goods?"],
+      "responses": [
+        "For additional cargo handling services, please contact our customer care team for assistance. "
+      ]
+    },
+    {
+      "tag": "placeanorder6",
+      "patterns": ["What is the maximum number of orders per day/week/month?"],
+      "responses": [
+        "There is no maximum number of orders per day! You can order as many as you want!"
+      ]
+    },
+    {
+      "tag": "placeanorder7",
+      "patterns": [
+        "How to check the image of the order that the driver uploads on the app?"
+      ],
+      "responses": [
+        "If you want to see a photo of your order uploaded by your driver, click on the order details page on the app or the order details panel on the website. You will be able to view uploaded images under Return Locations section."
+      ]
+    },
+    {
+      "tag": "Payment",
+      "patterns": ["How are GHN delivery charges calculated?"],
+      "responses": [
+        "The cost per order is calculated based on your requirements for the order, such as the type of transportation vehicle, additional services, and the distance between your pickup and drop-off locations."
+      ]
+    },
+    {
+      "tag": "Payment1",
+      "patterns": ["What payment methods are available with GHN?"],
+      "responses": [
+        "Pay the driver in cash upon completion of the order or transfer using your GHN e-wallet/credit card/Momo wallet for an easy and hassle-free transaction!"
+      ]
+    },
+    {
+      "tag": "Editandcancelorders",
+      "patterns": ["How to edit an order?"],
+      "responses": [
+        "To edit your order, click the icon in the top right corner of the order page and select 'Edit Order' from the menu on the app or the edit icon in the routes section of the website.You can edit the drop off location, recipient details and notes for the driver. Prices will change as new locations are updated.Please note that you can only edit once per order."
+      ]
+    },
+    {
+      "tag": "Orderingproblem",
+      "patterns": ["I can't find the driver"],
+      "responses": [
+        "GHN regrets not being able to find a driver as soon as possible, possibly because there are currently no drivers in your area or all drivers are busy delivering.Try adding a priority fee to encourage the driver to pick up your order first!"
+      ]
+    },
+    {
+      "tag": "Orderingproblem1",
+      "patterns": ["I can't find my address on the map"],
+      "responses": [
+        "If you cannot find your address during your search, you can click the Wrong or missing location? button to report the missing location. GHN will review and resolve this to fix this."
+      ]
+    },
+    {
+      "tag": "Orderingproblem2",
+      "patterns": ["I have a problem with my delivery order"],
+      "responses": [
+        "If you encounter any unexpected problems while the order is being processed and cannot be resolved with the driver, please contact the Support Call Center for timely answers and support."
+      ]
+    },
+    {
+      "tag": "Orderingproblem3",
+      "patterns": ["I want to submit a complaint/complaint?"],
+      "responses": [
+        "We are sorry that your experience was not as expected. Please contact the Support Center for timely answers and support or go to the support section to submit a request"
+      ]
+    },
+    {
+      "tag": "Orderingproblem4",
+      "patterns": ["My delivery was damaged?"],
+      "responses": [
+        "We are sorry that your experience was not as expected. In order to solve the problem smoothly and promptly fix the violations, please provide GHN with order information!"
+      ]
+    },
+    {
+      "tag": "Orderingproblem5",
+      "patterns": ["What should I do if the driver is unresponsive"],
+      "responses": [
+        "You can contact the driver via the in-app feature or by calling.If your driver is unresponsive and you want to change driver, you can simply click the icon in the top right corner of the order page and select Find a new driver. The system will then help you find a suitable new driver.If you need to contact the driver but can't, please contact the Support Center at the app for timely assistance."
+      ]
+    },
+    {
+      "tag": "Orderingproblem6",
+      "patterns": ["Why is my driver asking for an extra fee?"],
+      "responses": [
+        "The cost stated in the invoice on the order page will be the charge payable. If there are any additional fees that the two parties have not agreed on, please contact the Support Center at the application for timely assistance."
+      ]
+    },
+    {
+      "tag": "Orderingproblem7",
+      "patterns": [
+        "What should I do if the Driver is unable to deliver at the Return Point?"
+      ],
+      "responses": [
+        "Driver usually contacts the Receiver prior to arrival to confirm the return, please pay attention to the phone when the Driver is about to arrive."
+      ]
+    },
+    {
+      "tag": "Personalandaccountinformation",
+      "patterns": ["I forgot my password"],
+      "responses": [
+        "If you forgot your password, click the Forgot Password button and enter the phone number you registered your account with. GHN will then send you an SMS or a call to verify and update your password."
+      ]
+    },
+    {
+      "tag": "Personalandaccountinformation2",
+      "patterns": ["How to reset password?"],
+      "responses": [
+        "To change your password, go to Settings in the app and click change password. Then follow the instructions to change your password."
+      ]
+    },
+    {
+      "tag": "Personalandaccountinformation3",
+      "patterns": ["How do I update my phone number?"],
+      "responses": [
+        "To update your phone number, click your profile picture in the top left. In profile settings you will be able to change phone number after verification."
+      ]
+    },
+    {
+      "tag": "Personalandaccountinformation4",
+      "patterns": ["How to register an account?"],
+      "responses": [
+        "To register an account, you need to click on .No account? to register on the website or you can re-register your account on the mobile app.You can also sign up for an account with your Facebook, Google or Apple account by clicking the icon on the login page. Next, follow the steps guided in the app and you are done"
+      ]
+    },
+    {
+      "tag": "Shipper1",
+      "patterns": ["How does GHN work?", "Do I have to work full time?"],
+      "responses": [
+        "GHN is a super-fast delivery application that helps connect individuals with motorbikes / delivery trucks with customers who need to transport goods. Fees are displayed in advance on the application. Flexible working time according to your time, no fixed time required."
+      ]
+    },
+    {
+      "tag": "Shipper2",
+      "patterns": ["How much extra can I earn a day with GHN?"],
+      "responses": [
+        "Earnings will depend on the time you work and the number of orders you ship 1. Motorcycle partner:- Average about 250,000 VND/day when working full time.- In the peak season (rain/holiday) can increase to 400,000 VND/day.- With a free driver from 3 to 4 hours/day, you can earn an extra 150,000 VND per day2. Truck partners:- Average about 800,000 VND/day when working full time.- In the peak season (rain/holiday) can increase to 1,500,000 VND/day.- With a free driver from 3-4 hours/day, you can earn an extra 500,000 VND per day "
+      ]
+    },
+    {
+      "tag": "Shipper3",
+      "patterns": [
+        "How many days does it take for me to start receiving orders?"
+      ],
+      "responses": [
+        "After the partner completes the complete documentation at the last step of the driver partner registration process. GHN staff will actively contact the drivers within 1-2 working days to confirm the documents with the driver. After that, drivers need to quickly pay the deposit and go to GHN office to buy uniforms so that they can start receiving applications right after."
+      ]
+    },
+    {
+      "tag": "Vehicle",
+      "patterns": [
+        "I don't have a car, can I cooperate?",
+        "My vehicle weight is not listed. So how to be a driver partner with GHN?",
+        "Do I need to have my own vehicle?"
+      ],
+      "responses": [
+        "Currently GHN does not support driver partners who do not have a car.To cooperate with GHN, the driver needs to have a motorbike / pickup / van / truck available (under 2.5 tons for HCM, HP and under 4 tons for Hanoi). The car does not require the owner"
+      ]
+    },
+    {
+      "tag": "Vehicle1",
+      "patterns": [
+        "I own many vehicles. Can I attach them all to my driver profile?"
+      ],
+      "responses": [
+        "GHN stipulates that only 1 vehicle can be registered in 1 driver partner account. When a partner needs to change vehicle information, they should contact the company immediately for assistance in changing vehicle information."
+      ]
+    },
+    {
+      "tag": "Vehicle1",
+      "patterns": [
+        "I changed the means of transport. What should I do to update my profile?",
+        "Can I share a car with my friends to run deliveries with two separate accounts?"
+      ],
+      "responses": [
+        "The driver needs to send pictures of documents of the new vehicle to GHN company via Zalo support channel or Call Center so that GHN will soon update his profile",
+        "Currently, GHN system only supports 1 driver and 1 vehicle"
+      ]
+    },
+    {
+      "tag": "Shipper_Ecaluate",
+      "patterns": ["What should I do if I was misjudged?"],
+      "responses": [
+        "When realizing that their order is misrepresented, the partner needs to contact GHN Call Center to receive order information and transfer it to the driver management department for re-check."
+      ]
+    },
+    {
+      "tag": "Shipper_fashion",
+      "patterns": ["Is there a dress code that I must follow?"],
+      "responses": [
+        "GHN stipulates that when delivering goods, partners need to always wear the uniform provided by GHN, specifically: helmet and windbreaker or T-shirt and do not wear shorts during the delivery process. GHN will unilaterally stop cooperation if it is discovered that the partner does not wear a uniform during the delivery process."
+      ]
+    },
+    {
+      "tag": "fleetmanagement",
+      "patterns": ["What is GHN Fleet Management?"],
+      "responses": [
+        "Fleet Management is a new platform from GHN for vehicle owners to register, manage their fleet vehicles and drivers. With fleet-exclusive features, vehicle owners can monitor the activities of their fleet more clearly. The Fleet Management Portal is also used in tandem with the GHN Driver application."
+      ]
+    },
+    {
+      "tag": "fleetmanagement1",
+      "patterns": ["Is it mandatory to register each driver to the Fleet?"],
+      "responses": [
+        "Have. Each driver needs to have his or her own GHN driver account. Vehicle owners need to actively create a registration form for each driver in their fleet through the Fleet Management Portal, then the driver needs to fill in personal information and provide the necessary documents. After the driver's registration is approved, the driver's account will be automatically connected to the corresponding Fleet of the vehicle owner."
+      ]
+    },
+    {
+      "tag": "fleetmanagement2",
+      "patterns": ["Can team drivers share cars?"],
+      "responses": [
+        "Registered vehicles belonging to the fleet are shared and can be matched with any driver who has registered vehicle type information suitable for the vehicle. For example, a 1000kg truck can be paired with any driver registered to drive 1000kg.However, a vehicle can only be paired with a single driver at a time. In the absence of a vehicle, the vehicle owner can pair the driver with another vehicle to avoid operating interruptions."
+      ]
+    },
+    {
+      "tag": "fleetmanagement3",
+      "patterns": ["What does it take to register a vehicle in the Fleet?"],
+      "responses": [
+        "Here is a list of documents that need to be added during the registration process:- Vehicle registration- Vehicle registration is expired- Car photo"
+      ]
+    },
+    {
+      "tag": "Rewards",
+      "patterns": [
+        "Làm thế nào để bạn bảo vệ thông tin cá nhân và riêng tư của tôi?"
+      ],
+      "responses": [
+        "We have a very strict privacy policy and your personal information is kept strictly confidential. Our Terms & Conditions of Service and Privacy Policy outline why we need your personal information and how we will use it."
+      ]
+    },
+    {
+      "tag": "Reward1",
+      "patterns": ["How can I contact GHN?"],
+      "responses": ["You can email us at: support.vn@GHN.com or call 19001009"]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
     }
   ]
 }

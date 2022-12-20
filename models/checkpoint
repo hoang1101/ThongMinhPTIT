@@ -1,2 +1,2 @@
-model_checkpoint_path: "D:\\thongminhtestapi\\ThongMinhPTIT-main\\models\\model.tflearn"
-all_model_checkpoint_paths: "D:\\thongminhtestapi\\ThongMinhPTIT-main\\models\\model.tflearn"
+model_checkpoint_path: "D:\\THONG MINH\\ThongMinh\\models\\model.tflearn"
+all_model_checkpoint_paths: "D:\\THONG MINH\\ThongMinh\\models\\model.tflearn"
