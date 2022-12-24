@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
         },
         gender: DataTypes.BOOLEAN,
-        notification: {
-            type: DataTypes.BOOLEAN,
-            defaultValue: 1
-        },
         birthday: {
             type: DataTypes.DATEONLY,
         },

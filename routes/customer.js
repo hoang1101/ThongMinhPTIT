@@ -4,7 +4,7 @@ const { createOrder, getAllOrder, editOrderF, getAllOrderF, deleteOrder } = requ
 const router = require("express").Router();
 const {verifyToken} = require("../middleware/middleware")
 //tao thong tin tai khoan 8
-router.post('/create',verifyToken,createCustomer)/
+// router.post('/create',verifyToken,createCustomer)/
 // cap nhat thong tin Customer 9
 router.put('/update/:id',updateCustomer)
 //xem trang thai don hang 6

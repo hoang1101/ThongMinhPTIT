@@ -8,30 +8,29 @@ const db = require("../models");
 const { updatePassword, idUser } = require("./user");
 const { createCustomer } = require("./customer");
 const account = require("../models/account");
-
+const user = require("../controllers/user");
 const hashPassword = (password) =>
   bcrypt.hashSync(password, bcrypt.genSaltSync(12));
 
 exports.register = async (req, res) => {
-  const {
-    email,
-    password,
-    role,
-    fullname,
-    address,
-    phone,
-    gender,
-    notification,
-    birthday,
-  } = req.body;
+  const { email, password, role, fullname, address, phone, gender, birthday } =
+    req.body;
   try {
-    if (!email || !password || !role)
+    if (
+      !email ||
+      !password ||
+      !role ||
+      !fullname ||
+      !address ||
+      !phone ||
+      !gender ||
+      !birthday
+    )
       return res.status(400).json({
         success: false,
         err: 1,
         msg: "Missing inputs !",
       });
-
     const response = await authController.registerService(req.body);
 
     if (response.success === true) {
@@ -39,8 +38,6 @@ exports.register = async (req, res) => {
         success: true,
         response,
         data: account,
-        // data: account,
-        // account.role
       });
     } else {
       return res.status(404).json({
@@ -66,12 +63,6 @@ exports.login = async (req, res) => {
         err: 1,
         msg: "Missing inputs !",
       });
-    // console.log(response);//
-    // if (User.isAcctive === 1) return res.status(400).json({
-    //     err: 1,
-    //     msg: 'Tai khoan bi khoa'
-    // })
-    // const a = customerService.roleUser(email)
 
     const id = await idUser(email);
     console.log(id);
@@ -95,7 +86,6 @@ exports.login = async (req, res) => {
           success: true,
           token,
           data: account,
-          // account.role
         });
       } else {
         return res.status(404).json({
@@ -163,6 +153,13 @@ exports.sendResetEmail = async (req, res) => {
 exports.resetPassWord = async (req, res) => {
   const { passwordOld, passwordNew, passwordConfirm } = req.body;
   try {
+    if (!passwordOld || !passwordNew || !passwordConfirm) {
+      return res.status(500).json({
+        success: false,
+        msg: "Missing Input!",
+      });
+    }
+
     const email = res.req.Account.email;
     const id = await idUser(email);
     console.log(id);
@@ -200,6 +197,32 @@ exports.resetPassWord = async (req, res) => {
       success: true,
       msg: "Thay doi mat khau thanh cong",
     });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      err: -1,
+      msg: "Fail at auth controller: " + err,
+    });
+  }
+};
+
+exports.getInfo = async (req, res) => {
+  try {
+    const email = res.req.Account.email;
+    const _id = await user.idUser(email);
+    console.log(_id);
+
+    const data = await db.Account.findOne({
+      where: { id: _id },
+      include: [
+        {
+          model: db.Customer,
+        },
+      ],
+      attributes: [],
+    });
+
+    return res.status(200).json({ data });
   } catch (err) {
     return res.status(500).json({
       success: false,

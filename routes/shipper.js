@@ -3,7 +3,7 @@ const { verifyToken } = require("../middleware/middleware");
 
 const router = require("express").Router();
 // tao thong tin nguoi dung 2
-router.post('/create',verifyToken,createShipper);
+// router.post('/create',verifyToken,createShipper);
 // xac nhan da nhan don tu chu cua hang
 router.put('/shipperreciever/:id',verifyToken,shipperReceive)
 // xac nhan da giao xong
@@ -17,7 +17,7 @@ router.get('/getallreciever',verifyToken,getAllOrdeReciever);
 // tra cuu don hang da nhan
 router.get('/search/:id',searchOrder);
 // xac nhan tren don hang dang giao
-router.put('/status/:id',verifyToken,confirmOrder);
+// router.put('/status/:id',verifyToken,confirmOrder);
 
 
 // tao mot report 
