@@ -117,7 +117,6 @@ exports.editOrderF = async (req, res) => {
     nameReceiver,
     addressReceiver,
     phoneReceiver,
-    status,
     addressCustomer,
     id_Commodities,
     totalMoney,
@@ -135,7 +134,6 @@ exports.editOrderF = async (req, res) => {
       !nameReceiver ||
       !addressReceiver ||
       !phoneReceiver ||
-      !status ||
       !addressCustomer ||
       !id_Commodities ||
       !totalMoney
@@ -157,7 +155,6 @@ exports.editOrderF = async (req, res) => {
         nameReceiver,
         addressReceiver,
         phoneReceiver,
-        status,
         addressCustomer,
         id_Commodities,
         totalMoney,
@@ -181,6 +178,24 @@ exports.editOrderF = async (req, res) => {
     });
   }
 };
+// lay ra don hang can chinh sua
+exports.GetOrderId = async (req, res) => {
+  const { id } = req.params;
+  try {
+    const data = await db.Order.findByPk(id);
+    return res.status(200).json({
+      success: true,
+      data,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      err: -1,
+      msg: "Fail at auth controller: " + err,
+    });
+  }
+};
+
 // huy don hang chua duoc giao
 exports.deleteOrder = async (req, res) => {
   const { id } = req.params;

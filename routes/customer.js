@@ -1,5 +1,5 @@
 const { createCustomer, updateCustomer, seeStatus, findOrder, updateCustomerSender, getAllCommodities, createReport, editReport, deleteReport, getAllReport } = require("../controllers/customer");
-const { createOrder, getAllOrder, editOrderF, getAllOrderF, deleteOrder } = require("../controllers/order");
+const { createOrder, getAllOrder, editOrderF, getAllOrderF, deleteOrder, GetOrderId } = require("../controllers/order");
 
 const router = require("express").Router();
 const {verifyToken} = require("../middleware/middleware")
@@ -33,6 +33,7 @@ router.put('/updatereport/:id',verifyToken,editReport);
 router.delete('/deletereport/:id',verifyToken,deleteReport);
 // lay danh sach cac report
 router.get('/getallreport',verifyToken,getAllReport);
-
+// lay ra mot don hang theo id 
+router.get("/order/:id",GetOrderId);
 
 module.exports = router;
