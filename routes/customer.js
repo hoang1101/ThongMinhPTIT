@@ -52,6 +52,6 @@ router.delete("/deletereport/:id", verifyToken, deleteReport);
 // lay danh sach cac report
 router.get("/getallreport", verifyToken, getAllReport);
 // lay ra mot don hang theo id
-router.get("/order/:id", GetOrderId);
+// router.get("/order/:id", GetOrderId);
 
 module.exports = router;

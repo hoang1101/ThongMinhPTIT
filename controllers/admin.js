@@ -71,7 +71,7 @@ exports.lockUser = async (req, res) => {
     return res.status(200).json({
       success: true,
       user,
-      msg:'Da khoa thanh cong !'
+      msg: "Da khoa thanh cong !",
     });
   } catch (err) {
     return res.status(500).json({
@@ -99,7 +99,7 @@ exports.unLockUser = async (req, res) => {
     return res.status(200).json({
       success: true,
       user,
-      msg: 'Mo khoa tai khoan thanh cong !'
+      msg: "Mo khoa tai khoan thanh cong !",
     });
   } catch (err) {
     return res.status(500).json({

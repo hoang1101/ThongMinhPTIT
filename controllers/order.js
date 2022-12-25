@@ -69,6 +69,11 @@ exports.getAllOrder = async (req, res) => {
       where: {
         id_Customer: __id,
       },
+      include: [
+        {
+          model: db.Customer,
+        },
+      ],
     });
 
     return res.status(200).json({
@@ -179,22 +184,22 @@ exports.editOrderF = async (req, res) => {
   }
 };
 // lay ra don hang can chinh sua
-exports.GetOrderId = async (req, res) => {
-  const { id } = req.params;
-  try {
-    const data = await db.Order.findByPk(id);
-    return res.status(200).json({
-      success: true,
-      data,
-    });
-  } catch (err) {
-    return res.status(500).json({
-      success: false,
-      err: -1,
-      msg: "Fail at auth controller: " + err,
-    });
-  }
-};
+// exports.GetOrderId = async (req, res) => {
+//   const { id } = req.params;
+//   try {
+//     const data = await db.Order.findByPk(id);
+//     return res.status(200).json({
+//       success: true,
+//       data,
+//     });
+//   } catch (err) {
+//     return res.status(500).json({
+//       success: false,
+//       err: -1,
+//       msg: "Fail at auth controller: " + err,
+//     });
+//   }
+// };
 
 // huy don hang chua duoc giao
 exports.deleteOrder = async (req, res) => {
