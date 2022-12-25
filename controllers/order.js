@@ -19,7 +19,6 @@ exports.createOrder = async (req, res) => {
       !nameReceiver ||
       !addressReceiver ||
       !phoneReceiver ||
-      !status ||
       !addressCustomer ||
       !id_Commodities ||
       !totalMoney
@@ -39,7 +38,7 @@ exports.createOrder = async (req, res) => {
       nameReceiver,
       addressReceiver,
       phoneReceiver,
-      status,
+      status: "NR",
       addressCustomer,
       id_Commodities,
       totalMoney,
