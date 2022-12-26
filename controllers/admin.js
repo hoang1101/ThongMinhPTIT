@@ -60,7 +60,7 @@ exports.lockUser = async (req, res) => {
   try {
     const user = await db.Account.update(
       {
-        isAcctive: 1,
+        isAcctive: 0,
       },
       {
         where: {
@@ -88,7 +88,7 @@ exports.unLockUser = async (req, res) => {
   try {
     const user = await db.Account.update(
       {
-        isAcctive: 0,
+        isAcctive: 1,
       },
       {
         where: {
