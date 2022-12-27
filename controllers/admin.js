@@ -125,6 +125,10 @@ exports.getAllOrder = async (req, res) => {
           model: db.Customer,
           attributes: ["fullname", "phone"],
         },
+        {
+          model: db.Shipper,
+          attributes: ["fullname", "phone"],
+        },
       ],
     });
     return res.status(200).json({
