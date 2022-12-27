@@ -112,13 +112,6 @@ exports.unLockUser = async (req, res) => {
 
 exports.getAllOrder = async (req, res) => {
   try {
-    // const data = await db.Customer.findAll({
-    //     include: [{
-    //         model: db.Order,
-    //         as: 'order',
-    //         //attributes: ['id']
-    //     }]
-    // })
     const data = await db.Order.findAll({
       include: [
         {

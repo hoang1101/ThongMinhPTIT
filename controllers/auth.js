@@ -79,6 +79,21 @@ exports.login = async (req, res) => {
         msg: "Tai khoan cau ban da bi khoa !",
       });
     } else {
+      // lay thong tin nguoi dung
+      console.log(account.role);
+      let infor = {};
+      if (account.role === "customer" || account.role === "admin") {
+        infor = await db.Customer.findOne({
+          where: { userId: id },
+        });
+      } else {
+        infor = await db.Shipper.findOne({
+          where: {
+            userId: id,
+          },
+        });
+      }
+
       const response = await authController.loginService(req.body);
       account.password = undefined;
       const token = response.token;
@@ -87,6 +102,7 @@ exports.login = async (req, res) => {
           success: true,
           token,
           data: account,
+          infor,
         });
       } else {
         return res.status(404).json({
