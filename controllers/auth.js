@@ -217,19 +217,18 @@ exports.getInfo = async (req, res) => {
       raw: true,
     });
     console.log(_id.role);
-    const data = {};
     if (_id.role === "customer" || _id.role === "admin") {
       const customer = await db.Customer.findOne({
         where: { userId: _id.id },
       });
-      return res.status(200).json({ customer });
+      return res.status(200).json({ data: customer, success: true });
     } else {
       const shipper = await db.Shipper.findOne({
         where: {
           userId: _id.id,
         },
       });
-      return res.status(200).json({ shipper });
+      return res.status(200).json({ data: shipper, success: true });
     }
   } catch (err) {
     return res.status(500).json({
