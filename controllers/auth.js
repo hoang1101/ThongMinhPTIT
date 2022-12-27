@@ -9,6 +9,7 @@ const { updatePassword, idUser } = require("./user");
 const { createCustomer } = require("./customer");
 const account = require("../models/account");
 const user = require("../controllers/user");
+const customer = require("../models/customer");
 const hashPassword = (password) =>
   bcrypt.hashSync(password, bcrypt.genSaltSync(12));
 
@@ -209,20 +210,27 @@ exports.resetPassWord = async (req, res) => {
 exports.getInfo = async (req, res) => {
   try {
     const email = res.req.Account.email;
-    const _id = await user.idUser(email);
-    console.log(_id);
-
-    const data = await db.Account.findOne({
-      where: { id: _id },
-      include: [
-        {
-          model: db.Customer,
-        },
-      ],
-      attributes: [],
+    const _id = await db.Account.findOne({
+      where: {
+        email,
+      },
+      raw: true,
     });
-
-    return res.status(200).json({ data });
+    console.log(_id.role);
+    const data = {};
+    if (_id.role === "customer" || _id.role === "admin") {
+      const customer = await db.Customer.findOne({
+        where: { userId: _id.id },
+      });
+      return res.status(200).json({ customer });
+    } else {
+      const shipper = await db.Shipper.findOne({
+        where: {
+          userId: _id.id,
+        },
+      });
+      return res.status(200).json({ shipper });
+    }
   } catch (err) {
     return res.status(500).json({
       success: false,

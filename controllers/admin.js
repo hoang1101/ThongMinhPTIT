@@ -119,7 +119,14 @@ exports.getAllOrder = async (req, res) => {
     //         //attributes: ['id']
     //     }]
     // })
-    const data = await db.Order.findAll({});
+    const data = await db.Order.findAll({
+      include: [
+        {
+          model: db.Customer,
+          attributes: ["fullname", "phone"],
+        },
+      ],
+    });
     return res.status(200).json({
       success: true,
       data,
