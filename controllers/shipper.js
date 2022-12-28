@@ -102,7 +102,7 @@ exports.shipperReceiveDone = async (req, res) => {
       {
         where: {
           id: id,
-          status : "R"
+          status: "R",
         },
       }
     );
@@ -145,7 +145,7 @@ exports.shipperReceiveCancel = async (req, res) => {
       {
         where: {
           id: id,
-          status:"R"
+          status: "R",
         },
       }
     );

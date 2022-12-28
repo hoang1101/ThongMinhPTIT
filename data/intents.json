@@ -4,23 +4,55 @@
       "tag": "TG-NH",
       "patterns": [
         "When I received the goods?",
-        "When will my goods be delivered",
-        "How long will it take for my order to be delivered"
+        "when will my goods be delivered",
+        "when will the goods be delivered",
+        "how long will it take for my order to be delivered"
       ],
       "responses": [
         "After you have successfully placed your order, your goods will be delivered in 3-5 days",
         "About 3 to 5 days after applying"
       ]
     },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
 
     {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
       "tag": "GH-day-le",
-      "patterns": ["does delivery on weekends and holidays?"],
+      "patterns": ["Does delivery on weekends and holidays?"],
       "responses": ["We deliver on holidays and weekends"]
     },
 
     {
-      "tag": "TG_word",
+      "tag": "wordtime",
       "patterns": [
         "How long does the website work?",
         "What time does the website work"
@@ -31,7 +63,7 @@
       ]
     },
     {
-      "tag": "TG-in-tuan",
+      "tag": "wordtime_week",
       "patterns": [
         "Is the website working today?",
         "Is this page active today",
@@ -44,7 +76,7 @@
       ]
     },
     {
-      "tag": "DH",
+      "tag": "urgent delivery",
       "patterns": [
         "Can you deliver my order urgently?",
         "Can the order be delivered faster than expected?"
@@ -63,7 +95,7 @@
     },
 
     {
-      "tag": "huy-don-hang",
+      "tag": "cancleorder",
       "patterns": ["Can I cancel my order", "I want to cancel my order"],
       "responses": ["You can cancel an order when it has not been delivered"]
     },
@@ -77,6 +109,74 @@
       ],
       "responses": [
         "Currently we do not support international delivery, please understand"
+      ]
+    },
+    {
+      "tag": "GOODS",
+      "patterns": [
+        "What types of goods are prohibited from being transported?",
+        "List of goods not accepted for shipping on GHN"
+      ],
+      "reponses": [
+        "According to the regulations of the State, the following types of goods are prohibited from sending:arcotics and psychostimulants.Weapons, ammunition, military technical equipment, artifacts belonging to historical and cultural relics.Depraved, reactionary cultural products, publications and documents aimed at destroying public order against the State of the Socialist Republic of Vietnam.Explosive, flammable objects or substances and substances that are dangerous or unsanitary, causing environmental pollution.Types of articles and goods that the State prohibits from circulation, business, or import and export.Articles, publications and goods banned from entering the receiving country according to the notice of the Universal Postal Union (UPU).Letters in parcels (letters enclosed in goods).Articles and goods in letters, publications, and learning materials for the blind (Decree 142/2004/ND-CP dated July 8, 2014)"
+      ]
+    },
+    {
+      "tag": "GOODS1",
+      "patterns": [
+        "Can I use carton box to pack the goods?",
+        "What can I use to pack the goods?"
+      ],
+      "reponses": [
+        "The ideal carton box to pack and protect goods should be at least a 5-layer carton. If the carton box has only 3 layers or the goods inside are heavy, you should add layers of shrink fabric or bubble wrap to secure the goods."
+      ]
+    },
+    {
+      "tag": "GOODS2",
+      "patterns": ["How should I pack the item in the box?"],
+      "reponses": [
+        "1. Leave No Gaps Use padding material to minimize the movement of goods, reducing the risk of damage during transportation. Please ensure that the materials used for packaging provide sufficient support for your goods.2. Find the right locationlways place your product in the center of the box, with at least some space between the sides or corners. When padded with the right padding materials, this space provides extra padding and protection for your cargo.3. Separation is keyhen shipping multiple items in a single package, it is recommended that you pack each item separately. Should be separated to keep items from contacting each other during transportation.4. Cling - bubble - clingake care of wrapping the items first to hold them together before wrapping them with bubble wrap. Then cover it with several layers of shrink fabric and hold the air bags together for better protection"
+      ]
+    },
+    {
+      "tag": "GOODS3",
+      "patterns": [
+        "Can I use plastic bags instead of boxes for packaging?",
+        "Should I use a plastic bag or a carton box?"
+      ],
+      "reponses": [
+        "Plastic bags are great for transporting goods, but they offer little or no practical protection. Please ensure that the items are in shrink-wrapped and bubble-wrapped plastic bags for the best protection"
+      ]
+    },
+    {
+      "tag": "GOODS4",
+      "patterns": [
+        "How should I pack fragile items?",
+        "What to do with fragile goods?",
+        "How should I pack the porcelain cup set?"
+      ],
+      "reponses": [
+        "Fragile items such as wine glasses and ceramics should be wrapped in multiple layers of bubble wrap. 8cm bubble wrap network layer is recommended to protect the product.Fragile and vertical labels must also be clearly affixed on the box"
+      ]
+    },
+    {
+      "tag": "GOODS5",
+      "patterns": [
+        "Can I bundle multiple parcels together?",
+        "Can I pack multiple parcels together?"
+      ],
+      "reponses": [
+        "Please avoid trying to pack multiple boxes or parcels together.Each parcel should be shipped separately, with a separate bill of lading, to minimize the risk of damage, and/or missing parcels."
+      ]
+    },
+    {
+      "tag": "GOODS6",
+      "patterns": [
+        "How will I know if my item is fully packed and protected?",
+        "How can I check that the goods have been packed correctly?"
+      ],
+      "reponses": [
+        "A good way to assess whether your parcel is adequately protected for transit is by applying the following rules:Can your parcel withstand the impact of falling from the height of a table (75cm)?1. Wrap your items with bubble wrap for better protection from external impacts and pressure2. When using bubble wrap, around 8cm thick is best."
       ]
     },
     {
@@ -129,6 +229,13 @@
       ],
       "responses": [
         "In the event that a decrease in the star rating rate will affect the number of orders, the Partner's bonus program. To improve, the Partner should encourage customers to rate 5 stars for the next orders. Always maintain maintain the average number of stars > 4.7 to ensure the benefits of the order for yourself."
+      ]
+    },
+    {
+      "tag": "SHIPPER_ID",
+      "patterns": ["Is my profile secure?"],
+      "responses": [
+        "GHN is committed to absolute confidentiality in accordance with GHN's personal information protection policy. The collection and use of information of a partner is only done with the consent of the partner, unless otherwise provided for by law."
       ]
     },
     {
@@ -188,12 +295,12 @@
         "Have you been scammed, lost when receiving the application and the customer requested an advance?"
       ],
       "responses": [
-        "All Customers who are allowed to use the COD request feature on the GHN system have been verified and have their accounts identified. Therefore, Partners can rest assured when making advances to Customers. Cash advance according to the information displayed on the order, unfortunately, if there is an accident, GHN will support compensation at the rate of 80%, up to 3 million / order."
+        "All Customers who are allowed to use the COD request feature on the Ahamove system have been verified and have their accounts identified. Therefore, Partners can rest assured when making advances to Customers. Cash advance according to the information displayed on the order, unfortunately, if there is an accident, Ahamove will support compensation at the rate of 80%, up to 3 million / order."
       ]
     },
     {
       "tag": "shipper_order7",
-      "patterns": ["Are GHN goods bulky?"],
+      "patterns": ["Are GHN's goods bulky?"],
       "responses": [
         "Dimensions must not exceed 50x40x50cm and weight does not exceed 30kg. Besides, for goods with larger sizes than specified, Customers will order an additional service called HUGE DELIVERY to support additional fees. for Partners."
       ]
@@ -329,6 +436,15 @@
     },
     {
       "tag": "customer12_bs",
+      "patterns": [
+        "Will I receive a notification when my order has been received?"
+      ],
+      "responses": [
+        "Of course there is! Our electronic signature feature provides proof of delivery, allowing you to know immediately when the recipient has received your item and signed it."
+      ]
+    },
+    {
+      "tag": "customer13_bs",
       "patterns": ["Do you provide monthly statement?"],
       "responses": [
         "To automitically receive Statement for each month, kindly activate the Receive monthly statements by email function under your setting page in Notification category on web. Add the recipent email below to receive the statement.You may also download Statement under your setting page in Statement category on web."
@@ -360,6 +476,27 @@
       ]
     },
     {
+      "tag": "MakinganOrder3",
+      "patterns": ["What information do I need to create an order?"],
+      "responses": [
+        "Customer information: - Name - Phone number - Email address (optional) - Delivery address - Note the recipient's information"
+      ]
+    },
+    {
+      "tag": "MakinganOrder4",
+      "patterns": ["What is smart fill function?"],
+      "responses": [
+        "When creating an order, click Paste recipient details in one go Information we may detect:- Customer name - Customer's phone number  Customer's email address - Customer's address"
+      ]
+    },
+    {
+      "tag": "MakinganOrder5",
+      "patterns": ["How do I check my order history?"],
+      "responses": [
+        "1. Go to the Orders. Click the search icon in the top right corner of the page 3. Enter Tracking ID / Customer Name / Customer Phone Number 4. Click to view order details"
+      ]
+    },
+    {
       "tag": "placeanorder",
       "patterns": ["How to place an order?"],
       "responses": [
@@ -384,7 +521,7 @@
       "tag": "placeanorder3",
       "patterns": ["How to check driver chat messages in app?"],
       "responses": [
-        "Once your order is connected to the driver, you will be able to view the driver's details. Upon receiving your order, the driver will contact you by phone to confirm delivery.If you want to get in touch with the driver again, below the driver details, you can click the Chat or Call icon to use the chat feature in the app to message message or call the driver directly. "
+        "Once your order is connected to the driver, you will be able to view the driver's details. Upon receiving your order, the driver will contact you by phone to confirm delivery.If you want to get in touch with the driver again, below the driver details, you can click the Chat or Call icon to use the chat feature in the app to message message or call the driver directly."
       ]
     },
     {
@@ -398,7 +535,7 @@
       "tag": "placeanorder5",
       "patterns": ["I want the driver to help me unload the goods?"],
       "responses": [
-        "For additional cargo handling services, please contact our customer care team for assistance. "
+        "For additional cargo handling services, please contact our customer care team for assistance."
       ]
     },
     {
@@ -497,6 +634,13 @@
       ]
     },
     {
+      "tag": "Orderingproblem8",
+      "patterns": ["Can I stop a delivery if my customer changes his mind?"],
+      "responses": [
+        "If you want to cancel the order in case the order has not been received 1. At the Manage Orders page, find and select the order you want to cancel 2. Click Cancel order at the top right corner of the screen 3. You will see a confirmation request to cancel your order 4. Once you cancel your order, you won't be able to find it in your order history"
+      ]
+    },
+    {
       "tag": "Personalandaccountinformation",
       "patterns": ["I forgot my password"],
       "responses": [
@@ -521,7 +665,7 @@
       "tag": "Personalandaccountinformation4",
       "patterns": ["How to register an account?"],
       "responses": [
-        "To register an account, you need to click on .No account? to register on the website or you can re-register your account on the mobile app.You can also sign up for an account with your Facebook, Google or Apple account by clicking the icon on the login page. Next, follow the steps guided in the app and you are done"
+        "To register an account, you need to click on No account? to register on the website or you can re-register your account on the mobile app.You can also sign up for an account with your Facebook, Google or Apple account by clicking the icon on the login page. Next, follow the steps guided in the app and you're done"
       ]
     },
     {
@@ -610,7 +754,7 @@
       "tag": "fleetmanagement2",
       "patterns": ["Can team drivers share cars?"],
       "responses": [
-        "Registered vehicles belonging to the fleet are shared and can be matched with any driver who has registered vehicle type information suitable for the vehicle. For example, a 1000kg truck can be paired with any driver registered to drive 1000kg.However, a vehicle can only be paired with a single driver at a time. In the absence of a vehicle, the vehicle owner can pair the driver with another vehicle to avoid operating interruptions."
+        "Registered vehicles belonging to the fleet are shared and can be matched with any driver who has registered vehicle type information suitable for the vehicle.For example, a 1000kg truck can be paired with any driver registered to drive 1000kg.However, a vehicle can only be paired with a single driver at a time. In the absence of a vehicle, the vehicle owner can pair the driver with another vehicle to avoid operating interruptions."
       ]
     },
     {
@@ -622,9 +766,7 @@
     },
     {
       "tag": "Rewards",
-      "patterns": [
-        "Làm thế nào để bạn bảo vệ thông tin cá nhân và riêng tư của tôi?"
-      ],
+      "patterns": ["How do you protect my personal information and privacy?"],
       "responses": [
         "We have a very strict privacy policy and your personal information is kept strictly confidential. Our Terms & Conditions of Service and Privacy Policy outline why we need your personal information and how we will use it."
       ]
@@ -635,36 +777,25 @@
       "responses": ["You can email us at: support.vn@GHN.com or call 19001009"]
     },
     {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
+      "tag": "claim",
+      "patterns": ["What items are not eligible for a claim?"],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
-
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
+        "Have. These are items that will not be eligible for a claim in the event of a damaged or lost parcel.- Credit card or ATM card- Human or animal remains- Flammable, flammable, gun or sword- Living creatures- Perishables such as vegetables, fruits, etc.- Poison or toxic substance- Test certificates, passports and insurance documents cannot be copied- Handwritten manuscripts, original films, tapes, artwork and film materials cannot be reproduced- Cigarettes, cigars or volatile items such as fireworks, kerosene, gas cans or paint thinners- Cash, checks, bills, stocks and other marketable securities- Drugs, Substances including marijuana/marijuana - Depraved cultural material - And other products prohibited under the provisions of Vietnamese law"
       ]
     },
     {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "tag": "claim1",
+      "patterns": ["When can I claim?"],
+      "responses": [
+        "Claims regarding lost or damaged items - Within 30 days of order creation for unprocessed orders- Within 6 months from the time of creating the order, in case the parcel sent is missing, delivery is delayed compared to the announced shipping time. Please note that complaints will not be accepted:- Order has been confirmed and compensated- Returned order received."
+      ]
+    },
+    {
+      "tag": "claim2",
+      "patterns": ["When will I receive my compensation?"],
+      "responses": [
+        "To complete the compensation procedure, you need to check and respond to the correction or error before 5:00 p.m. on N+2 (N is the date you receive an email from GHN).In the event that GHN does not receive your response, we will proceed to compensate according to the reported compensation value to your COD payment account within 14 days from the date of receiving the email from GHN. procedures, and at the same time will not assist in handling complaints arising related to the case"
+      ]
     }
   ]
 }
