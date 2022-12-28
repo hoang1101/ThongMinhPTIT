@@ -251,6 +251,10 @@ exports.getUserReport = async (req, res) => {
               model: db.Customer,
               attributes: ["fullname"],
             },
+            {
+              model: db.Shipper,
+              attributes: ["fullname"],
+            },
           ],
         },
       ],

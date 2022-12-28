@@ -229,7 +229,7 @@ exports.createReport = async (req, res) => {
       args: [req.body.content],
     };
     console.log(req.body.content);
-    PythonShell.run("main.py", options, async (err, content) => {
+    PythonShell.run("main.py", options, function (err, content) {
       if (err)
         res.status(500).json({
           content: "Xin lỗi! Hiện tại chat bot đang quá tải",
