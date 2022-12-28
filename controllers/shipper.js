@@ -33,6 +33,59 @@ const user = require("./user");
 //     });
 //   }
 // };
+
+exports.updateShipper = async (req, res) => {
+  const { fullname, address, phone, gender, birthday } = req.body;
+
+  const { id } = req.params;
+  try {
+    console.log(id);
+    if (!id)
+      return res.status(500).json({
+        success: false,
+        msg: "Not Found!",
+      });
+    if (!fullname || !address || !phone || !gender || !birthday)
+      return res.status(400).json({
+        success: false,
+        err: 1,
+        msg: "Missing inputs !",
+      });
+    let shipper = await db.Shipper.findByPk(id);
+    if (shipper.id != id) {
+      return res.status(404).json({
+        success: false,
+        msg: "Not Found",
+      });
+    } else {
+      shipper = await db.Shipper.update(
+        {
+          fullname,
+          address,
+          phone,
+          gender,
+          birthday,
+        },
+        {
+          where: {
+            id: shipper.id,
+          },
+        }
+      );
+    }
+    return res.status(200).json({
+      success: true,
+      shipper,
+    });
+  } catch (err) {
+    return res.status(500).json({
+      success: false,
+      err: -1,
+      msg: "Fail at auth controller: " + err,
+    });
+  }
+};
+
 //  xac nhan da nhan don tu chu cua hang
 exports.shipperReceive = async (req, res) => {
   const { id } = req.params;
