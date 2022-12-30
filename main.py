@@ -32,8 +32,8 @@ def remove_accents(input_str):
 if __name__ == '__main__':
 
     # while True:
-        message = sys.argv[1]
-        # message = input("")
+        # message = sys.argv[1]
+        message = input("")
         response(remove_accents(message))
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/

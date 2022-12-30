@@ -149,7 +149,7 @@ net = tflearn.regression(net, optimizer='adam', loss='categorical_crossentropy')
 
 model = tflearn.DNN(net, tensorboard_dir='tflearn_logs')
 
-model.fit(train_x, train_y, n_epoch=1000, batch_size=8, show_metric=True)
+model.fit(train_x, train_y, n_epoch=50, batch_size=8, show_metric=True)
 model.save('models/model.tflearn')
 
 
